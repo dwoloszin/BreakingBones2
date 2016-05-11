@@ -1,4 +1,4 @@
-package breaking.bones.States;
+package breaking.bones.states;
 
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 

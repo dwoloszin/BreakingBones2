@@ -1,4 +1,4 @@
-package breaking.bones.States;
+package breaking.bones.states;
 
 import com.badlogic.gdx.graphics.OrthographicCamera;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
@@ -20,5 +20,6 @@ public abstract class State {
     protected abstract void handleImput();
     public abstract void update(float dt);
     public abstract void render (SpriteBatch sprite);
+    public abstract void dispose();
 
 }

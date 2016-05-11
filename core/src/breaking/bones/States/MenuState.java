@@ -1,5 +1,6 @@
-package breaking.bones.States;
+package breaking.bones.states;
 
+import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 
@@ -27,11 +28,27 @@ public class MenuState extends State {
 
     @Override
     public void handleImput() {
+        if(Gdx.input.justTouched()){
+            gameStateMenager.push(new PlayState(gameStateMenager));
+            dispose();
+
+        }
 
     }
 
     @Override
     public void update(float dt) {
+        handleImput();
+
+    }
+
+    @Override
+    public void dispose() {
+        texture_novojogo.dispose();
+        texture_dificuldade.dispose();
+        texture_ajuda.dispose();
+        texture_sair.dispose();
+
 
     }
 
